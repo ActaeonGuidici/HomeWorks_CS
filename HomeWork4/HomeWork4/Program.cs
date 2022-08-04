@@ -156,5 +156,13 @@ struct Client
 #endregion
 
 #region Task_8
+class Student
+{
+    public string name;
+    public string surname;
+    public int age;
+    public int[][] evaluation = new int[3][] { new int[0], new int[0], new int[0] };
+    
 
+}
 #endregion
