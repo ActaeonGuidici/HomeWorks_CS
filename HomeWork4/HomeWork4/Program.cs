@@ -1,4 +1,25 @@
-﻿#region Task_5
+﻿Student oguz = new Student("Oguz", "2150ru", 24);
+oguz.showInfo();
+oguz.enterProrammingGrade(5);
+oguz.enterProrammingGrade(10);
+oguz.enterProrammingGrade(4);
+oguz.enterProrammingGrade(8);
+oguz.enterAdministrationGrade(4);
+oguz.enterAdministrationGrade(7);
+oguz.enterAdministrationGrade(2);
+oguz.enterAdministrationGrade(10);
+oguz.enterAdministrationGrade(11);
+oguz.enterDesignGrade(9);
+oguz.enterDesignGrade(4);
+oguz.enterDesignGrade(5);
+oguz.enterDesignGrade(12);
+oguz.enterDesignGrade(6);
+oguz.showGrades();
+Console.WriteLine($"Programming avarage grade is " + oguz.averageProgramming());
+Console.WriteLine($"Administratio avarage grade is " + oguz.averageAdministration());
+Console.WriteLine($"Design avarage grade is " + oguz.averageDesign());
+
+#region Task_5
 enum ArticleType {
     Food, Clothes, Beverages
 }
@@ -156,5 +177,143 @@ struct Client
 #endregion
 
 #region Task_8
+class Student
+{
+    public string fullName;
+    public string group;
+    public int age;
+    public int[][] grades = new int[3][] { new int[0], new int[0], new int[0] };
 
+    public Student(string fullName, string group, int age)
+    {
+        this.fullName = fullName;
+        this.group = group;
+        this.age = age;
+    }
+
+    public void enterProrammingGrade(int grade)
+    {
+        int[] tmp = new int[grades[0].Length + 1];
+        for (int i = 0; i < tmp.Length - 1; i++)
+        {
+            tmp[i] = grades[0][i];
+        }
+        tmp[tmp.Length - 1] = grade;
+        grades[0] = new int[tmp.Length];
+        for (int i = 0; i < tmp.Length; i++)
+        {
+            grades[0][i] = tmp[i];
+        }
+    }
+
+    public void enterAdministrationGrade(int grade)
+    {
+        int[] tmp = new int[grades[1].Length + 1];
+        for (int i = 0; i < tmp.Length - 1; i++)
+        {
+            tmp[i] = grades[1][i];
+        }
+        tmp[tmp.Length - 1] = grade;
+        grades[1] = new int[tmp.Length];
+        for (int i = 0; i < tmp.Length; i++)
+        {
+            grades[1][i] = tmp[i];
+        }
+    } 
+    
+    public void enterDesignGrade(int grade)
+    {
+        int[] tmp = new int[grades[2].Length + 1];
+        for (int i = 0; i < tmp.Length - 1; i++)
+        {
+            tmp[i] = grades[2][i];
+        }
+        tmp[tmp.Length - 1] = grade;
+        grades[2] = new int[tmp.Length];
+        for (int i = 0; i < tmp.Length; i++)
+        {
+            grades[2][i] = tmp[i];
+        }
+    }
+    public void showGrades()
+    {
+        Console.Write("Programming grades: ");
+        for (int i = 0; i < grades[0].Length; i++)
+        {
+            if (i != grades[0].Length - 1)
+            {
+                Console.Write($"{grades[0][i]}, ");
+            }
+            else
+            {
+                Console.Write($"{grades[0][i]}");
+
+            }
+        }
+
+        Console.Write("\nAdministration grades: ");
+        for (int i = 0; i < grades[1].Length; i++)
+        {
+            if (i != grades[1].Length - 1)
+            {
+                Console.Write($"{grades[1][i]}, ");
+            }
+            else
+            {
+                Console.Write($"{grades[1][i]}");
+
+            }
+        }
+
+        Console.Write("\nDesign grades: ");
+        for (int i = 0; i < grades[2].Length; i++)
+        {
+            if (i != grades[2].Length - 1)
+            {
+                Console.Write($"{grades[2][i]}, ");
+            }
+            else
+            {
+                Console.Write($"{grades[2][i]}\n");
+
+            }
+        }
+    }
+
+    public double averageProgramming()
+    {
+        double tmp = 0;
+        for (int i = 0; i < grades[0].Length; i++)
+        {
+                tmp += grades[0][i];
+        }
+        return tmp / (grades[0].Length);
+    }
+
+        public double averageAdministration()
+    {
+        double tmp = 0;
+        for (int i = 0; i < grades[1].Length; i++)
+        {
+                tmp += grades[1][i];
+        }
+        return tmp / (grades[1].Length);
+    }
+    
+        public double averageDesign()
+    {
+        double tmp = 0;
+        for (int i = 0; i < grades[2].Length; i++)
+        {
+                tmp += grades[2][i];
+        }
+        return tmp / (grades[2].Length);
+    }
+
+    public void showInfo() {
+        Console.WriteLine($"Full name: {fullName}");
+        Console.WriteLine($"Group: {group}");
+        Console.WriteLine($"Age: {age}");
+    }
+}
 #endregion
