@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\HomeWorks_CS\\HomeWork4\\HomeWork4\\HomeWork4.csproj": {}
+    "C:\\Users\\user\\source\\repos\\HomeWork5\\HomeWork5\\HomeWork5.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\HomeWorks_CS\\HomeWork4\\HomeWork4\\HomeWork4.csproj": {
+    "C:\\Users\\user\\source\\repos\\HomeWork5\\HomeWork5\\HomeWork5.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\HomeWorks_CS\\HomeWork4\\HomeWork4\\HomeWork4.csproj",
-        "projectName": "HomeWork4",
-        "projectPath": "C:\\Users\\user\\HomeWorks_CS\\HomeWork4\\HomeWork4\\HomeWork4.csproj",
+        "projectUniqueName": "C:\\Users\\user\\source\\repos\\HomeWork5\\HomeWork5\\HomeWork5.csproj",
+        "projectName": "HomeWork5",
+        "projectPath": "C:\\Users\\user\\source\\repos\\HomeWork5\\HomeWork5\\HomeWork5.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\HomeWorks_CS\\HomeWork4\\HomeWork4\\obj\\",
+        "outputPath": "C:\\Users\\user\\source\\repos\\HomeWork5\\HomeWork5\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -55,7 +55,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
